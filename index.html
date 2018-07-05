@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Task1</title>
+</head>
+
+<body>
+    <div ng-controller="MyController">
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Id</th>
+                <th>Photo</th>
+                <th>Runs</th>
+                <th>Remove</th>
+            </tr>
+            <tr class="reStyle" ng-repeat="player in players">
+                <td>{{player.name}}</td>
+
+                <td>{{player.id}}</td>
+                <td>
+                    <img ng-src="{{player.photo}}" alt={{player.name}}image title="{{player.name}}"/>
+                </td>
+                <td>{{player.runs}}</td>
+                <td style="color: red;" ng-click="removePlayer(player)"> Remove Data </td>
+            </tr>
+        </table>
+
+        <form ng-submit="addPlayer()" id="form-group">
+            <input type="text" placeholder="type player's name" ng-model="newName">
+            <br>
+            <input type="text" placeholder="type id" ng-model="newId">
+            <br>
+            <input type="text" placeholder="give image url" ng-model="newImage">
+            <br>
+            <input type="text" placeholder="type runs" ng-model="newRuns">
+            <br>
+            <input type="submit" value="Submit">
+            <br>
+
+        </form>
+    </div>
+    <script src="angular.min.js"></script>
+    <script src="angular-route.js"></script>
+    <script src="app.js"></script>
+    
+</body>
+
+</html>

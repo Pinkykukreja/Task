@@ -1,0 +1,25 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 20px;
+}
+td, th{
+    border: 1px solid black;
+}
+.reStyle{
+    text-align: center;
+}
+#form-group{
+    text-align: center;
+    margin-top: 15px;
+}
+form input{
+    margin: 10px 0px;
+    padding: 10px;
+    text-align: center;
+}
+input[type=submit]{
+    background-color: limegreen;
+}
+
+
